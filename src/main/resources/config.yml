@@ -1,0 +1,7 @@
+messages:
+  farming-prefix: "&8[&aFertilia Farming&8]&r "
+  items-prefix: "&8[&bFertilia Items&8]&r "
+
+harvest:
+  protect-registered-crops-from-breaking: true
+  require-use-permission: true

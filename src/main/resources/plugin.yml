@@ -1,0 +1,27 @@
+name: FertiliaPublicFarming
+version: '1.0.0'
+main: com.fertilia.farming.FertiliaPublicFarmingPlugin
+api-version: '1.20'
+author: Fertilia
+description: Type/state based public farming and item registry for Fertilia.
+
+commands:
+  ffarm:
+    description: Manage Fertilia public crop types.
+    usage: /ffarm help
+    permission: fertilia.farming.admin
+  fitem:
+    description: Manage Fertilia item registry.
+    usage: /fitem help
+    permission: fertilia.items.admin
+
+permissions:
+  fertilia.farming.use:
+    description: Allows harvesting registered public crops.
+    default: true
+  fertilia.farming.admin:
+    description: Allows managing public farming.
+    default: op
+  fertilia.items.admin:
+    description: Allows managing the Fertilia item registry.
+    default: op
