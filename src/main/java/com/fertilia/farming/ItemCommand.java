@@ -90,8 +90,10 @@ final class ItemCommand implements BaseCommand {
             player.sendMessage(plugin.itemsPrefix() + "§cUnknown registry key.");
             return;
         }
-        target.getInventory().addItem(item).values().forEach(leftover -> target.getWorld().dropItemNaturally(target.getLocation(), leftover));
-        player.sendMessage(plugin.itemsPrefix() + "§aGave §f" + CropType.normalizeId(args[1]) + " §ato §f" + target.getName() + "§a.");
+        Player finalTarget = target;
+        finalTarget.getInventory().addItem(item).values().forEach(leftover ->
+                finalTarget.getWorld().dropItemNaturally(finalTarget.getLocation(), leftover));
+        player.sendMessage(plugin.itemsPrefix() + "§aGave §f" + CropType.normalizeId(args[1]) + " §ato §f" + finalTarget.getName() + "§a.");
     }
 
     private void delete(Player player, String[] args) {
